@@ -11,7 +11,6 @@ namespace WebSocketChatApp
     {
         public static string username;
         public static string websocketurl = "ws://127.0.0.1:8000";
-        public static string get_online_users = "{\"type\":\"get_users\"}";
 
     }
 }

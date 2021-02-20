@@ -40,8 +40,8 @@ namespace WebSocketChatApp
             }
             else if(jsonparsed["message_type"] == "new_message")
             {
-                string newmessage = "[" + jsonparsed.user + "]:" + jsonparsed.message;
-                richTextBox1.Invoke(new Action(() => { richTextBox1.Text += Environment.NewLine + newmessage; }));
+                string newmessage = "["+ jsonparsed.time+"]" + "[" + jsonparsed.user + "]:" + jsonparsed.message;
+                richTextBox1.Invoke(new Action(() => { richTextBox1.Text += newmessage  + Environment.NewLine; }));
             }
 
         }
@@ -71,7 +71,14 @@ namespace WebSocketChatApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ws.Send("{\"type\":\"add_user\",\"content\":\"" + statics.username + "\"}");
+            string message = textBox1.Text;
+            textBox1.Clear();
+            ws.Send("{\"type\":\"new_message\",\"message\":\"" + message + "\"}");
+        }
+
+        private void ana_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

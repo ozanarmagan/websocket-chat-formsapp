@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("aaaa");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("aaaa");
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.onlineusers = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,7 +40,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.richTextBox1.Location = new System.Drawing.Point(0, 37);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(515, 462);
@@ -55,12 +55,12 @@
             this.onlineusers.GridLines = true;
             this.onlineusers.HideSelection = false;
             this.onlineusers.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.onlineusers.Location = new System.Drawing.Point(521, 37);
             this.onlineusers.MultiSelect = false;
             this.onlineusers.Name = "onlineusers";
             this.onlineusers.RightToLeftLayout = true;
-            this.onlineusers.Size = new System.Drawing.Size(179, 457);
+            this.onlineusers.Size = new System.Drawing.Size(179, 462);
             this.onlineusers.TabIndex = 1;
             this.onlineusers.UseCompatibleStateImageBehavior = false;
             this.onlineusers.View = System.Windows.Forms.View.Details;
@@ -122,6 +122,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Name = "ana";
             this.Text = "ana";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ana_FormClosed);
             this.Load += new System.EventHandler(this.ana_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
